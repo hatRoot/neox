@@ -1,0 +1,400 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente estilo Apple */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #1d1d1f;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1d1d1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  height: 100px;
+  flex-wrap: wrap;
+  position: relative; /* ¡agregado! */
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Botón de menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 2.8rem;
+  cursor: pointer;
+  margin-left: auto; /* ¡agregado! */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 35px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #0071e3;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.btn {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+/* Secciones */
+.seccion {
+  padding: 100px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.seccion img {
+  width: 500px;
+  border-radius: 30px;
+  max-width: 100%;
+}
+
+.seccion .texto {
+  max-width: 500px;
+}
+
+.seccion h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.seccion p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* Fondos */
+.blanco {
+  background-color: #ffffff;
+  color: #1d1d1f;
+}
+
+.negro {
+  background-color: #1d1d1f;
+  color: #ffffff;
+}
+
+.gris {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+/* Footer */
+.footer {
+  background-color: #1d1d1f;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 35px;
+  }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d1f;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .seccion {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .seccion img, 
+  .seccion .texto {
+    max-width: 90%;
+  }
+
+  .seccion h2 {
+    font-size: 2rem;
+  }
+
+  .seccion p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive para menú hamburguesa */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1d1d1f;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 10;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+}
+/* Estilos para la página de Planes y Servicios */
+
+/* Contenedor principal */
+#planes-servicios {
+  padding: 50px 10%;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+.plan {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.plan h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.plan p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.plan .precio {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #0071e3;
+}
+
+/* Fondo y estilo de las secciones */
+.seccion {
+  padding: 60px 10%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.seccion h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.seccion p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.seccion img {
+  width: 450px;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.cta-seccion {
+  background-color: #f5f5f7;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-contenido h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #1d1d1f;
+}
+
+.cta-contenido p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  padding: 14px 35px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+
+/* Estilos para el Footer */
+.footer {
+  background-color: #1d1d1f;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 12px;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+

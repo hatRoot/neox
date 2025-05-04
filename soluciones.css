@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #1d1d1f;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1d1d1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  height: 100px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2.8rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+  color: #0071e3;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.btn {
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005bb5;
+}
+
+/* Secciones */
+.seccion {
+  padding: 80px 10%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blanco {
+  background-color: #ffffff;
+}
+
+.gris {
+  background-color: #f5f5f7;
+}
+
+/* Servicios */
+.servicios-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding-top: 20px;
+}
+
+.servicio {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.servicio h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  color: #1d1d1f;
+}
+
+.servicio .ventajas {
+  font-weight: 500;
+  color: #333;
+}
+
+.servicio ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.servicio li {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Footer */
+.footer {
+  background-color: #1d1d1f;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+
+.footer-links {
+  margin: 30px 0;
+}
+
+.footer-links a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+/* Imágenes extra */
+.imagen-top,
+.imagen-bottom {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+/* Colores Apple suaves para tarjetas */
+.servicio:nth-child(1) {
+  background-color: #fffbea;
+}
+.servicio:nth-child(2) {
+  background-color: #e5f3ff;
+}
+.servicio:nth-child(3) {
+  background-color: #e8fff1;
+}
+.servicio:nth-child(4) {
+  background-color: #ffeaea;
+}
+.servicio:nth-child(5) {
+  background-color: #f2e8ff;
+}
+.servicio:nth-child(6) {
+  background-color: #eafffa;
+}
+.servicio:nth-child(7) {
+  background-color: #fff5e0;
+}
