@@ -7,58 +7,68 @@
   <link rel="stylesheet" href="contacto.css" />
 </head>
 <body>
-
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">
-      <a href="index.html" style="color: white; text-decoration: none;">Neox Solutions</a>
-    </div>
-    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="nav-links" id="nav-links">
+  <header class="navbar">
+    <div class="logo"><a href="index.html">Neox Solutions</a></div>
+    <ul class="nav-links">
       <li><a href="index.html#planes-servicios">Planes y Servicios</a></li>
       <li><a href="soluciones.html">Soluciones</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
     </ul>
     <div class="nav-actions">
-      <input type="text" class="search-input" placeholder="Buscar...">
-      <a href="https://wa.me/525535757364" target="_blank">
-        <button class="btn">WhatsApp</button>
-      </a>
+      <button class="btn">
+        <a href="tel:+525535757364" style="color:white; text-decoration:none;">Llamar ahora</a>
+      </button>
     </div>
-  </div>
+  </header>
 
-  <!-- Sección contacto -->
-  <section class="contacto seccion">
-    <div class="texto">
-      <h2>¿Necesitas ayuda o tienes una consulta?</h2>
-      <p>Completa el formulario o escríbenos directamente por WhatsApp y un especialista te ayudará a encontrar la mejor solución.</p>
-      <a href="https://wa.me/525535757364" target="_blank">
-        <button class="btn">Hablar por WhatsApp</button>
-      </a>
-    </div>
+  <main class="contacto-contenido">
+    <h1>Contáctanos</h1>
+    <p>Estamos listos para ayudarte. Puedes llamarnos, escribirnos o seguirnos en redes sociales.</p>
 
-    <form class="formulario">
-      <input type="text" placeholder="Nombre completo" required />
-      <input type="email" placeholder="Correo electrónico" required />
-      <textarea rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
-      <button type="submit" class="btn">Enviar mensaje</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-links">
-        <a href="index.html#planes-servicios">Planes y Servicios</a>
-        <a href="soluciones.html">Soluciones</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="contacto.html">Contacto</a>
+    <div class="contacto-info">
+      <div class="canal">
+        <h3>📞 Teléfono</h3>
+        <p><a href="tel:+525535757364">+52 55 3575 7364</a></p>
       </div>
-      <div class="footer-copy">© 2025 Neox Solutions. Todos los derechos reservados.</div>
+      <div class="canal">
+        <h3>📧 Correo</h3>
+        <p><a href="mailto:soporte@neoxsolutions.mx">soporte@neoxsolutions.mx</a></p>
+      </div>
+      <div class="canal">
+        <h3>💬 WhatsApp</h3>
+        <p><a href="https://wa.me/525535757364" target="_blank">Escríbenos por WhatsApp</a></p>
+      </div>
+      <div class="canal">
+        <h3>🌐 Redes Sociales</h3>
+        <p>
+          <a href="#" target="_blank">Facebook</a> |
+          <a href="#" target="_blank">Instagram</a> |
+          <a href="#" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </main>
+      <!-- Mapa de ubicación -->
+    <div class="mapa-ubicacion">
+      <h2>Ubicación</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.2344905793793!2d-99.14624078465495!3d19.436065486888327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f90a1bd3f4ff%3A0x9f9b6c3dd59b26f6!2sCDMX!5e0!3m2!1ses!2smx!4v1714759303800!5m2!1ses!2smx"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-contenido">
+      <p>&copy; 2025 Neox Solutions. Todos los derechos reservados.</p>
+      <p>
+        <a href="privacidad.html">Aviso de Privacidad</a> |
+        <a href="contacto.html">Contacto</a>
+      </p>
     </div>
   </footer>
 
-  <script src="contacto.js"></script>
 </body>
 </html>
